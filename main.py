@@ -7,12 +7,12 @@ import time
 import os
 import threading
 
-bot_token = os.environ.get("TOKEN", None) 
-api_hash = os.environ.get("HASH", None) 
-api_id = os.environ.get("ID", None)
+bot_token = os.environ.get("6257043452:AAFCVkmhrRxPzq3QJ_dhaj5avTRceyS4UJ0")
+api_hash = os.environ.get("1977320d37cdca4cafe75ff56da748ca") 
+api_id = os.environ.get("22918127")
 bot = Client("mybot", api_id=api_id, api_hash=api_hash, bot_token=bot_token)
 
-ss = os.environ.get("STRING", None)
+ss = os.environ.get("BQFds-8AcxtopQW_7XpuruZSEi3BBaVwwWdf9bBpNus-1vrNNYL1Rd5xpRWKTEOcBWX7p71NPrDYGO5br1LweyJ5GuN7PKLaZIql9cQcF2_7q7IHuXc84sCOus2mbK5EfIwEO5maxBrcfqjDqt68mwuD-pOw6k5Q1Q4G7AVlbmLyBOtfN8UlOGSewrDyUsKLU6fYAGXnP7Bht24CRuG8Q-_CTGBkSpIVlDK83e-bVxnxwZnnlg5qVOZJUdrr9Ga9yMjTBpQx-WmK_YTAKl0UuP-JNLB-sn48HCqH9oyVbAiRRseQg2kkxF1v4gKUS94FA6o9mAa37Il-_MWyJXYUMzymhnItRwAAAABZTWoqAA")
 if ss is not None:
 	acc = Client("myacc" ,api_id=api_id, api_hash=api_hash, session_string=ss)
 	acc.start()
@@ -62,7 +62,7 @@ def progress(current, total, message, type):
 @bot.on_message(filters.command(["start"]))
 def send_start(client: pyrogram.client.Client, message: pyrogram.types.messages_and_media.message.Message):
 	bot.send_message(message.chat.id, f"__👋 Hi **{message.from_user.mention}**, I am Save Restricted Bot, I can send you restricted content by it's post link__",
-	reply_markup=InlineKeyboardMarkup([[ InlineKeyboardButton("🌐 Source Code", url="https://github.com/bipinkrish/Save-Restricted-Bot")]]), reply_to_message_id=message.id)
+	reply_markup=InlineKeyboardMarkup([[ InlineKeyboardButton("🌐 Source Code", url="")]]), reply_to_message_id=message.id)
 
 
 @bot.on_message(filters.text)
